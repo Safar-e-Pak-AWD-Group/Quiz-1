@@ -48,7 +48,7 @@ const bookingSchema = new mongoose.Schema(
     },
 
     date: {
-      type: String, // ✅ saved as "YYYY-MM-DD" from frontend
+      type: String, 
       default: () => new Date().toISOString().split("T")[0],
     },
   },
@@ -56,3 +56,4 @@ const bookingSchema = new mongoose.Schema(
 );
 
 export default mongoose.model("Booking", bookingSchema);
+

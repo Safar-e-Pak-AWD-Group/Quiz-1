@@ -8,24 +8,25 @@ import cors from "cors";
 const app = express();
 const port = 5000;
 
-// ✅ Connect to MongoDB
+//  Connect to MongoDB
 connectToMongo();
 
-// ✅ Middlewares
+//  Middlewares
 app.use(cors());
 app.use(express.json());
 
-// ✅ Default route
+// Default route
 app.get("/", (req, res) => {
   res.send("✅ SafarPak Backend Running");
 });
 
-// ✅ User Routes
+//  User Routes
 app.use("/api/users", userRoutes);
 app.use("/api/bookings", bookingRoutes);
 
 
-// ✅ Start Server
+//  Start Server
 app.listen(port, () => {
   console.log(`🚀 Server running on http://localhost:${port}`);
 });
+

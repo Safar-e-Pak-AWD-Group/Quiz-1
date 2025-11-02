@@ -9,4 +9,3 @@ const userSchema = new mongoose.Schema({
 
 export default mongoose.model("User", userSchema);
 
-// 03248826811 // toa ki assignment

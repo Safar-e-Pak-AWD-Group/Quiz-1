@@ -2,20 +2,20 @@
 
 import validator from "validator";
 
-// ✅ Sanitize user input (basic cleanup)
+//  Sanitize user input (basic cleanup)
 export const sanitizeInput = (value) => {
   if (typeof value !== "string") return "";
   return validator.escape(value.trim());
 };
 
-// ✅ Validate email format
+//  Validate email format
 export const validateEmail = (email) => {
   if (!email) return "Email is required.";
   if (!validator.isEmail(email)) return "Invalid email format.";
   return "";
 };
 
-// ✅ Validate password rules
+//  Validate password rules
 export const validatePassword = (password) => {
   if (!password) return "Password is required.";
   if (password.length < 8) return "Password must be at least 8 characters.";
@@ -30,7 +30,7 @@ export const validatePassword = (password) => {
   return "";
 };
 
-// ✅ Validate name (for registration)
+//  Validate name (for registration)
 export const validateName = (name) => {
   if (!name) return "Full name is required.";
   if (name.length < 3) return "Name must be at least 3 characters long.";
@@ -38,3 +38,4 @@ export const validateName = (name) => {
     return "Name can only contain letters and spaces.";
   return "";
 };
+
